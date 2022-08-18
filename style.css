@@ -1,0 +1,733 @@
+body{
+    margin: 0;
+    background: #fff;
+    font-family: 'Open Sans', sans-serif;
+    color: #fff;
+}
+*{
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+}
+
+/*CONTAINER*/
+.container{
+    width: 100%;
+    max-width: 1170px;
+    margin: 0 auto;
+    padding: 10px;
+}
+/*HEADER*/
+.header{
+height: 120px;
+
+}
+.inner-header{
+    display: flex;
+    justify-content: space-between;
+}
+.burger-menu{
+    width:40px ;
+    height: 30px;
+    display: none;
+    position: absolute;
+    top: 10%;
+    right:10%;
+    z-index: 50;
+}
+.burger-menu:before,
+.burger-menu:after{
+    content:"";
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+    display: block;
+    position: absolute;
+    z-index:1 ;
+    transition: 0.5s;
+}
+.burger-menu:after{
+    bottom: 0;
+}
+.burger-menu:before{
+    top: 0;
+}
+.burger-menu.active:before{
+    transform: rotate(45deg);
+    top: 14px;
+}
+.burger-menu.active:after{
+    transform: rotate(-45deg);
+    bottom: 14px;
+}
+
+
+#burger{
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+    display: block; 
+    position: absolute;
+    top:13px;
+    z-index: 50;
+    transition: 0.5s;
+}
+#burger.active{
+    transform: scale(0);
+}
+
+.burger-background{
+    width: 100%;
+    height: 100%;
+    background-color: #f1cdb3;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 49;
+    display: none;
+}
+    
+.burger-background.active{
+    top:0;
+  }
+
+
+.logo{
+    margin-top: 40px;
+    display: block;
+    position: relative;
+    z-index: 50;
+}
+.logo-tlt{
+    font-size: 32px;
+    font-weight: 300;
+    color: #f1cdb3;
+    margin:0 ;
+}
+.logo-tlt.active{
+    color: #fff;
+}
+.logo-subltl{
+    font-size: 13px;
+    
+}
+.nav{
+    margin-top: 60px;
+    display: block;
+    position: relative;
+    z-index: 50;
+}
+.nav-link{
+    font-size:15px ;
+    margin-right: 40px;
+    color: #8e8d8e;
+    display:inline-block;
+}
+.nav-link:last-child{
+    margin-right: 0;
+}
+.nav-link:hover{
+    color: #fff;
+    transition:1s ;
+}
+.nav-link:after{
+    content:"";
+    display: block;
+    width: 100%;
+    height: 3px;
+    background: #f1cdb3;
+    opacity: 0;
+    transition: 1s;
+}
+.nav-link:hover:after{
+    opacity: 1;
+}
+
+/*INTRO*/
+.intro{
+    height: 925px;
+    background: url(img/intro/intro.jpg) no-repeat center;
+    background-size: cover;
+}
+.inner-intro{
+    width: 100%;
+    height: 600px;
+    display: flex;
+}
+.intro-txt{
+    height: 300px;
+    display: block;
+    position: relative;
+    top: 200px;
+    left: 0;
+}
+.intro-tlt{
+    font-size: 44px;
+    font-weight:300 ;
+    line-height: 30px;
+}
+.intro-btn{
+    width: 200px;
+    height: 50px;
+    background: #f1cdb3;
+    color: #292929;
+    cursor: pointer;
+    border: 1px solid #f1cdb3 ;
+    border-radius: 20px;
+    margin-top: 40px;
+    font-size: 17px;
+    font-weight: 300;
+}
+/*PETS*/
+.pets{
+    height: 590px;
+    background: #fff;
+   
+}
+.pets-inner{
+    height: 420px;
+    display: flex;
+    
+    position: relative;
+    top:90px;
+
+}
+
+.pets-item{
+    width: 50%;
+    color: #292929;
+}
+.pets-tlt{
+    font-size: 35px;
+    font-weight: 300;
+    color: #545454;
+    line-height: 10px;
+}
+.pets-txt{
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 10px;
+}
+.p-m{
+    margin-top: 40px;
+}
+
+.pets-img{
+    display: block;
+    margin: 0 auto;
+    object-fit: cover;
+    max-width: 100%;
+}
+/*CARD*/
+
+.swiper {
+    width: 100%;
+    height: 100%;
+    margin-top: 50px;
+    z-index: 1;
+    overflow: hidden;
+  }
+  #wrapp{
+    height:600px;
+  }
+
+  .swiper-button-next:after, .swiper-container-rtl .swiper-button-prev:after {
+    content: '';
+    color:transparent;
+    background-image: url(img/card/arrow_next_right_icon_123733.svg);
+    position: absolute;
+    left: -5px;
+    z-index: 1000;
+    height: 10px;
+      border: 3px solid #f1cdb3;
+      height: 25px;
+      border-radius: 50%;
+      padding: 5px;
+    }
+    
+    .swiper-button-prev:after, .swiper-container-rtl .swiper-button-prev:after {
+    content: '';
+    background-image: url(img/card/arrow_back_left_icon_123734.svg);
+    position: absolute;
+    left: 15px;
+    z-index: 1000;
+    color: transparent;
+    height: 10px;
+      border: 3px solid #f1cdb3;
+      height: 25px;
+      border-radius: 50%;
+      padding: 5px;
+    }
+    
+    .swiper-wrapper{
+        width: 100%;
+        margin-top: 150px;
+        height: auto;
+    }
+
+
+    .swiper-slide{
+      margin: 0 auto;
+      
+    }
+
+
+.card{
+    height: 830px;
+    background: #f6f6f6;
+}
+
+
+.card-tlt{
+    color: #545454;
+    font-size: 35px;
+    font-weight: 300;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 10px;
+    height: 70px;
+    position: absolute;
+    top: 10px; 
+    left: 30%;
+    z-index: 1;
+}
+
+
+
+.items-sl{
+    width: 220px;
+    height:430px;
+    border-radius: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    background: #fafafa;
+    margin: 0 auto;
+    cursor: pointer;
+  }
+.items-sl:hover{
+box-shadow:7px 7px 7px 15px #e3e0e0;
+}
+
+.slider-img{
+    object-fit: scale-down;
+    width: 100%;
+    height: 267px;
+}
+.itm-subtlt{
+    font-size: 20px;
+    font-weight: 300;
+    color: #292929;
+    margin: 0;
+    display: inline-block;
+    height: 10px;
+    position: absolute;
+    top: 50%;
+    padding-left: 75px
+}
+
+
+/*card BUTTON*/
+.card-btn{
+    width: 185px;
+    height: 50px;
+    background: transparent;
+    border: 3px solid #f1cdb3;
+    border-radius:20px ;
+    margin: 0 auto;
+    margin-top: 50px;
+    cursor: pointer;
+    transition: 1s ;
+    font-size: 10px;
+}
+.card-btn:hover{
+    background: #f1cdb3;
+    
+}
+.card-button{
+    width: 265px;
+    height: 50px;
+    background: #f1cdb3;
+    color: #292929;
+    border: 3px solid #f1cdb3;
+    border-radius: 20px;
+    cursor: pointer;
+    position: absolute;
+    bottom: 50px;
+    left: 37%;
+    z-index: 1;
+    transition: 0.5s;
+    text-align: center;
+}
+.card-button:hover{
+    background: #fddcc4;
+    
+   
+}
+#frenk{
+    object-fit: none;
+}
+
+
+/*HELP*/
+.help{
+    height: 600px;
+    background: #fff;
+    display: flex;
+}
+.inner-help{
+    height: 470px;
+    width: 100%;
+    display: flex;
+    position: relative;
+    top: 70px;
+}
+.help-tlt{
+    color: #545454;
+    font-size: 35px;
+    font-weight: 300;
+    line-height: 10px;
+  
+    text-align: center;
+    height: 20px;
+    position: absolute;
+    left: 35%;
+}
+
+
+.items-help{
+    height: 300px;
+    display: flex;
+    width:100%;
+    position: relative;
+    top:35%;
+    flex-wrap: wrap;
+    
+}
+
+/*help icon*/
+.help-icon{
+    height: 60px;
+    fill: #f1cdb3;
+    width: 20%;
+    transition: 1s;
+}
+.items-help{
+    display: flex;
+}
+.item-helpup{
+    display: flex;
+    justify-content: space-between;
+}
+.help-icon:hover{
+    fill: #292929;
+    
+}
+#vita{
+   position: relative;
+   margin: 0px 35px;
+   
+}
+.help-svg{
+    color: #292929;
+    font-size: 20px;
+    font-weight:300 ;
+}
+.help-svg-d{
+    color: #292929;
+    font-size: 20px;
+    font-weight:300 ;
+}
+
+/*DONATION*/
+.donation{
+    height: 440px;
+    background: #f6f6f6;
+    display: block;
+}
+.donation-inner{
+    height: 300px;
+    width: 100%;
+    position: relative;
+    top: 70px;
+    display:flex ;
+    justify-content: space-between;
+}
+.donat-item{
+    width: 50%;
+}
+.donat-img{
+    max-width: 100%;
+    object-fit: cover;
+}
+.donat-tlt{
+    color: #545454;
+    font-size: 35px;
+    font-weight: 400;
+    line-height: 10px;
+}
+.bank{
+    font-size: 15px;
+    color: #545454;
+
+}
+.credit{
+    width: 220px;
+    height:45px;
+    background: #f1cdb3;
+    color: #292929;
+    font-size: 15px;
+    text-align: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 10px;
+    text-align: center;
+}
+.txt-donat{
+    font-size: 12px;
+    color: #d8d8d8;
+    line-height: 5px;
+    margin-top: 30px;
+}
+/*FOOOTER*/
+.footer{
+height: 365px;
+background: url(img/footer/footer.jpg) no-repeat center;
+background-size: cover;
+}
+.inner-footer{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    position: relative;
+    top: 30px;
+}
+.item-footer{
+    width: 33.333%;
+    position: relative;
+    bottom: 0;
+}
+
+.contacts{
+    width: 100%;
+    height: 50px;
+}
+.icons-foot{
+    width: 30px;
+}
+
+
+
+.fot-tlt{
+    font-size: 35px;
+    font-weight: 300;
+    line-height: 10px;
+}
+
+.foot-img{
+    max-width: 100%;
+    object-fit: cover;
+    position: relative;
+    bottom:0;
+}
+
+.info{
+    font-size: 15px;
+    color: #f1cdb3;
+    position: relative;
+    left: 50px;
+    bottom: 105px;
+    
+}
+
+
+/*============MEDIA===========*/
+ 
+@media(max-width:1200px){
+    
+    
+     /*intro*/
+    .intro-tlt{
+        font-size: 35px;
+        line-height: 10px;
+    }
+    /*pets*/
+    .pets-tlt{
+        line-height: 12px;
+    }
+    /*donat*/
+    .donat-tlt{
+        font-size: 25px;
+    }
+    .credit{
+        width:fit-content ;
+        font-size: 15px;
+        padding: 5px 5px;
+    }
+   
+    /*footer*/
+    .fot-tlt{
+        font-size: 25px;
+    }
+}
+    @media(max-width:768px){
+      /*header*/
+
+      .burger-menu{
+        display: block;
+      }
+      .burger-background{
+        display: block;
+        top: -100%;
+        transition: 1s;
+      }
+      .burger-background.active{
+        top:0;
+      }
+     
+      .burger{
+        display: block;
+       }
+       #burger.active{
+        transform: scale(0);
+       }
+        .nav{
+            display: grid;
+            position: absolute;
+            top: -100%;
+            margin-top: 20px;
+            transition: 1s;
+        }
+        .nav.active{
+            top: 30%;
+        }
+        .nav-link{
+            font-size: 30px;
+            color: #fff;
+            margin-top: 20px;
+        }
+       
+       
+       /*intro*/
+        .intro{
+        height: auto;
+       }
+        
+       
+       /*pets*/
+       
+       .pets-tlt{
+        font-size: 25px;
+        }
+        .pets-txt{
+            font-size: 12px;
+        }
+        /*slider*/
+       
+        .items-sl{
+            margin-left: 70px;
+        }
+        .itm-subtlt{
+            padding-left: 60px;
+        }
+        /*help*/
+        .bank{
+            font-size: 12px;
+        }
+        .help-svg-d{
+            font-size: 10px;
+        }
+        .help-svg{
+            font-size: 10px;
+            margin-right: 10px;
+        }
+        #vita{
+            margin:0 auto;
+        }
+
+        .credit{
+            font-size: 10px;
+        }
+         /*card*/
+         .card-inner{
+            top: 10px;
+        }
+        .card-tlt{
+            font-size: 25px;
+        }
+        .items-sl{
+            width: 150px;
+        }
+       
+        /*help*/
+        #vita{
+            right: -15px;
+        }
+        .help-tlt{
+            font-size: 18px;
+        }
+       
+        /*donat*/
+        .txt-donat{
+            line-height: 10px;
+        }
+        .donat-tlt{
+            font-size: 15px;
+        }
+        /*footer*/
+        .fot-tlt{
+           font-size: 15px;
+        }
+    }
+    /*footer*/
+    .info{
+        font-size: 12px;
+    }
+    
+   
+    @media(max-width:576px){
+        /*pets*/
+        .pets{
+            height: 500px;
+        }
+        .pets-tlt{
+            font-size: 15px;
+
+        }
+        .pets-txt{
+            font-size: 10px;
+        }
+        /*card*/
+        
+        .card-button{
+            left: 28%;
+            width: 50%;
+        }
+        .card-btn{
+            width: 50%;
+           border-radius: 15px;
+        }
+        .card-tlt{
+            font-size: 15px;
+        }
+        .itm-subtlt{
+            font-size: 12px;
+            left: 45px;
+        }
+        .card-button{
+            font-size: 12px;
+        }
+        .items-sl{
+            width: 95px;
+        }
+       
+        /*footer*/
+        .info{
+            font-size: 5px;
+            bottom: 88px;
+        }
+        .foot-img{
+            display: none;
+        }
+    }
